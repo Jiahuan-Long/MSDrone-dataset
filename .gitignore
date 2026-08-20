@@ -1,0 +1,6 @@
+work/
+outputs/
+*.zip
+*.zip.part-*
+.DS_Store
+
