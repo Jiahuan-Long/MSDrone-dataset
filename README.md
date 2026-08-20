@@ -33,6 +33,8 @@ The archive contains range-based subdirectories under `hjc/`, including:
 
 Download all release assets from the latest release:
 
+https://github.com/Jiahuan-Long/cdupatch-dataset/releases/tag/v1.0.0
+
 - `hjc_8.18.zip.part-aa`
 - `hjc_8.18.zip.part-ab`
 - `checksums-sha256.txt`
@@ -59,4 +61,3 @@ See `checksums-sha256.txt` for checksums of the original archive and each split 
 ## License
 
 No license file has been provided with this dataset. Add one before public redistribution if needed.
-
