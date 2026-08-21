@@ -1,49 +1,62 @@
-# CDUPatch Dataset
+# MSDrone Dataset
 
-Dataset archive for:
+MSDrone is a drone-view vehicle detection dataset prepared for research on dual-modal visible-infrared perception and adversarial robustness.
 
-**CDUPatch: Color-driven Universal Adversarial Patch Attack for Dual-modal Visible-Infrared Detectors**
+This dataset is associated with the paper **CDUPatch: Color-Driven Universal Adversarial Patch Attack for Dual-Modal Visible-Infrared Detectors**, where MSDrone is used to study object detection and adversarial patch attacks under cross-modal visible/infrared settings, distance changes, and scale variation.
 
-The dataset is distributed as GitHub Release assets because the original archive is larger than GitHub's normal git file limit.
+Related paper:
 
-## Archive
+- arXiv: https://arxiv.org/abs/2504.10888
+- ACM Digital Library: https://dl.acm.org/doi/10.1145/3746027.3755188
 
-- Original archive: `hjc 8.18.zip`
-- Compressed size: about 3.7 GB
-- Uncompressed size: 3,959,925,437 bytes
-- Entries: 12,365
-- Top-level directory: `hjc/`
+## Project Introduction
 
-## Directory Summary
+MSDrone focuses on vehicle targets captured from drone viewpoints. Compared with ordinary ground-view detection datasets, drone imagery introduces stronger scale changes, viewpoint changes, background clutter, and distance-dependent object appearance. These properties make MSDrone useful for evaluating both detector performance and the robustness of visible-infrared detection systems.
 
-The archive contains range-based subdirectories under `hjc/`, including:
+In the CDUPatch study, the dataset supports experiments around color-driven universal adversarial patches for dual-modal detectors. The broader goal is to test whether a physical or image-space patch optimized in the visible domain can remain effective when the scene is represented across visible and infrared modalities.
 
-- `0-10m`
-- `10-20m`
-- `20-30m`
-- `30-40m`
-- `40-50m`
-- `50-60m`
-- `60-70m`
-- `70-80m`
-- `80-90m`
-- `90-100m`
+## Dataset Contents
 
-## Download And Reassemble
+The current release archive contains:
 
-Download all release assets from the latest release:
+- 6,167 `.jpg` images
+- 6,167 YOLO-format `.txt` labels
+- 12,334 data files in total
+- Distance-binned subsets from `0-10m` to `90-100m`
+- `image/` and `label/` folders under each distance bin
 
-https://github.com/Jiahuan-Long/cdupatch-dataset/releases/tag/v1.0.0
+Distance-bin file counts:
 
-- `hjc_8.18.zip.part-aa`
-- `hjc_8.18.zip.part-ab`
+| Distance | Images | Labels |
+| --- | ---: | ---: |
+| `0-10m` | 110 | 110 |
+| `10-20m` | 555 | 555 |
+| `20-30m` | 554 | 554 |
+| `30-40m` | 743 | 743 |
+| `40-50m` | 850 | 850 |
+| `50-60m` | 751 | 751 |
+| `60-70m` | 769 | 769 |
+| `70-80m` | 673 | 673 |
+| `80-90m` | 628 | 628 |
+| `90-100m` | 534 | 534 |
+
+## Download
+
+The dataset is distributed as GitHub Release assets because the archive is larger than GitHub's normal git file limit.
+
+Download all assets from the latest release:
+
+https://github.com/Jiahuan-Long/MSDrone-dataset/releases/tag/v1.0.0
+
+- `MSDrone.zip.part-aa`
+- `MSDrone.zip.part-ab`
 - `checksums-sha256.txt`
 
-Then reassemble the archive:
+Reassemble the archive:
 
 ```bash
-cat hjc_8.18.zip.part-* > "hjc 8.18.zip"
-shasum -a 256 "hjc 8.18.zip"
+cat MSDrone.zip.part-* > MSDrone.zip
+shasum -a 256 MSDrone.zip
 ```
 
 Compare the output with `checksums-sha256.txt`.
@@ -54,10 +67,30 @@ You can also use the helper script:
 bash scripts/assemble_dataset.sh
 ```
 
-## SHA256
+## Label Format
 
-See `checksums-sha256.txt` for checksums of the original archive and each split part.
+Labels are stored in YOLO text format:
+
+```text
+class_id x_center y_center width height
+```
+
+Coordinates are normalized to image width and height.
+
+## Citation
+
+If you use MSDrone in work related to CDUPatch, please cite the associated paper:
+
+```bibtex
+@article{long2025cdupatch,
+  title = {CDUPatch: Color-Driven Universal Adversarial Patch Attack for Dual-Modal Visible-Infrared Detectors},
+  author = {Long, Jiahuan and Wu, Zirui and Chen, Zhaoyu and Liang, Junwei and Xue, Feng},
+  journal = {arXiv preprint arXiv:2504.10888},
+  year = {2025}
+}
+```
 
 ## License
 
-No license file has been provided with this dataset. Add one before public redistribution if needed.
+No standalone dataset license file has been provided yet. Please add or confirm the dataset license before public redistribution.
+
