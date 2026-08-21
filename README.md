@@ -4,6 +4,8 @@ MSDrone is a drone-view vehicle detection dataset prepared for research on dual-
 
 This dataset is associated with the paper **CDUPatch: Color-Driven Universal Adversarial Patch Attack for Dual-Modal Visible-Infrared Detectors**, where MSDrone is used to study object detection and adversarial patch attacks under cross-modal visible/infrared settings, distance changes, and scale variation.
 
+![MSDrone visible and infrared samples across distance bins](docs/msdrone_visible_infrared_samples.jpg)
+
 Related paper:
 
 - arXiv: https://arxiv.org/abs/2504.10888
@@ -22,6 +24,7 @@ The current release archive contains:
 - 6,167 `.jpg` images
 - 6,167 YOLO-format `.txt` labels
 - 12,334 data files in total
+- Visible-light files marked with `_vis_` and infrared files marked with `_inf_`
 - Distance-binned subsets from `0-10m` to `90-100m`
 - `image/` and `label/` folders under each distance bin
 
@@ -93,4 +96,3 @@ If you use MSDrone in work related to CDUPatch, please cite the associated paper
 ## License
 
 No standalone dataset license file has been provided yet. Please add or confirm the dataset license before public redistribution.
-
