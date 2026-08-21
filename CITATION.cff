@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: If you use MSDrone or CDUPatch, please cite the associated paper.
+title: "Cdupatch: Color-driven universal adversarial patch attack for dual-modal visible-infrared detectors"
+authors:
+  - family-names: Long
+    given-names: Jiahuan
+  - family-names: Yao
+    given-names: Wen
+  - family-names: Jiang
+    given-names: Tingsong
+  - family-names: Hou
+    given-names: Jiacheng
+  - family-names: Jia
+    given-names: Shuai
+  - family-names: Wu
+    given-names: Junqi
+  - family-names: Zhang
+    given-names: Xiaoya
+  - family-names: Zheng
+    given-names: Xiaohu
+  - family-names: Ma
+    given-names: Chao
+preferred-citation:
+  type: conference-paper
+  title: "Cdupatch: Color-driven universal adversarial patch attack for dual-modal visible-infrared detectors"
+  authors:
+    - family-names: Long
+      given-names: Jiahuan
+    - family-names: Yao
+      given-names: Wen
+    - family-names: Jiang
+      given-names: Tingsong
+    - family-names: Hou
+      given-names: Jiacheng
+    - family-names: Jia
+      given-names: Shuai
+    - family-names: Wu
+      given-names: Junqi
+    - family-names: Zhang
+      given-names: Xiaoya
+    - family-names: Zheng
+      given-names: Xiaohu
+    - family-names: Ma
+      given-names: Chao
+  collection-title: "Proceedings of the 33rd ACM International Conference on Multimedia (ACM MM)"
+  year: 2025

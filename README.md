@@ -85,11 +85,11 @@ Coordinates are normalized to image width and height.
 If you use MSDrone in work related to CDUPatch, please cite the associated paper:
 
 ```bibtex
-@article{long2025cdupatch,
-  title = {CDUPatch: Color-Driven Universal Adversarial Patch Attack for Dual-Modal Visible-Infrared Detectors},
-  author = {Long, Jiahuan and Wu, Zirui and Chen, Zhaoyu and Liang, Junwei and Xue, Feng},
-  journal = {arXiv preprint arXiv:2504.10888},
-  year = {2025}
+@inproceedings{long2025cdupatch,
+  title={Cdupatch: Color-driven universal adversarial patch attack for dual-modal visible-infrared detectors},
+  author={Long, Jiahuan and Yao, Wen and Jiang, Tingsong and Hou, Jiacheng and Jia, Shuai and Wu, Junqi and Zhang, Xiaoya and Zheng, Xiaohu and Ma, Chao},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia (ACM MM)},
+  year={2025}
 }
 ```
 
